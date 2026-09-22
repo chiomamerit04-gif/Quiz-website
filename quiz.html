@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Quiz App</title>
+    <link rel="stylesheet" href="/CSS/quiz.css">
+</head>
+
+<body>
+    <!-- LOGIN PAGE -->
+    <div class="container" id="loginPage">
+        <div class="quiz-icon">🧠</div>
+        <h1>Web Quiz Challenge</h1>
+        <p class="subtitle">Test your knowledge of web development!</p>
+        <form id="loginForm">
+            <div class="input-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" placeholder="Enter your name" required />
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter your password" required />
+            </div>
+            <button type="submit" class="primary-btn">Start Quiz</button>
+            <p id="loginMessage"></p>
+        </form>
+    </div>
+    <!-- QUIZ PAGE -->
+    <div class="quiz-container" id="quizPage">
+        <div class="quiz-header">
+            <div>
+                <p class="welcome-text">Welcome, <span id="userName"></span> 👋</p>
+                <h2>Web Development Quiz</h2>
+            </div>
+            <div class="question-counter">
+                <span id="currentQuestion">1</span>
+                /
+                <span id="totalQuestions">10</span>
+            </div>
+        </div>
+        <!-- PROGRESS BAR -->
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+        <!-- QUESTION -->
+        <div class="question-section">
+            <p class="question-label">Question</p>
+            <h3 id="question">Question will appear here</h3>
+        </div>
+        <!-- ANSWER OPTIONS -->
+        <div class="answers" id="answers">
+            <!-- JavaScript will add answers here -->
+        </div>
+        <!-- NEXT BUTTON -->
+        <button id="nextBtn" class="primary-btn">Next →</button>
+    </div>
+    <!-- RESULTS PAGE -->
+    <div class="results-container" id="resultsPage">
+        <div class="result-icon">🏆</div>
+        <h1>Quiz Completed!</h1>
+        <p class="result-message">Great job, <span id="resultName"></span>!</p>
+        <div class="score-box">
+            <p>Your Score</p>
+            <h2><span id="scorePercentage">0</span>%</h2>
+            <p>
+                <span id="correctAnswers">0</span>
+                out of
+                <span id="resultTotal">10</span>
+                correct
+            </p>
+        </div>
+        <div class="quiz-details">
+            <div class="detail">
+                <span>📅 Date</span>
+                <strong id="quizDate"></strong>
+            </div>
+            <div class="detail">
+                <span>🕒 Time</span>
+                <strong id="quizTime"></strong>
+            </div>
+        </div>
+        <button id="restartBtn" class="primary-btn">Take Quiz Again</button>
+    </div>
+  <script src="/javascript/quiz.js"></script>
+</body>
+
+</html>
