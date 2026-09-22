@@ -88,6 +88,8 @@ h1 {
 }
 .quiz-container {
     display: none;
+     width: 100%;
+    max-width: 550px;
 }
 .quiz-header {
     display: flex;
