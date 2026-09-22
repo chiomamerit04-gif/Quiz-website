@@ -99,14 +99,13 @@ resultTotal.textContent = quizQuestions.length;
 loginForm.addEventListener("submit", function (event) {
   event.preventDefault();
   let name = nameInput.value.trim();
-  let password = passwordInput.value;
-  let correctPassword = "2004";
-  if (password !== correctPassword) {
-    loginMessage.textContent = "Incorrect password. Please try again.";
+ let password = passwordInput.value.trim();
+
+if (password === "") {
+    loginMessage.textContent = "Please enter a password.";
     loginMessage.style.color = "red";
     return;
-  }
-
+}
   if (name === "") {
     loginMessage.textContent = "Please enter your name.";
     loginMessage.style.color = "red";
